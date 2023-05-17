@@ -12,7 +12,7 @@ local AnyName = library:Add("AnyLibraryName")
 ```
 Add Label
 ```Lua
-main:CreateLabel("AnyLabel")
+AnyName:CreateLabel("AnyLabel")
 ```
 Add Toggle (Work only print state)
 ```Lua
