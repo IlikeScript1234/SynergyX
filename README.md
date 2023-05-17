@@ -1,2 +1,4 @@
-Synergy X Executor And Script Currently Development Coming Soons :)
-From Zephyr/Synergy X Developer
+To Making An library Add Load Library First
+```Lua
+local Library = https://raw.githubusercontent.com/IlikeScript1234/SynergyX/main/Library
+```
