@@ -21,7 +21,7 @@ print(state)
 end)
 ```
 Add Button
-```
+```Lua
 AnyName:CreateButton("Any Name", function()
     print("hi how are u bad?")
 end)
