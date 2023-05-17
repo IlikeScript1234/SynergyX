@@ -1,3 +1,4 @@
+Synergy X Ui library
 Our Discord : https://discord.gg/34BFzS3pj7 and https://discord.gg/JnSvN7wdwW
 
 To Making An library Add Load Library First
