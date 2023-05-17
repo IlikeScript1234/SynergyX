@@ -10,7 +10,7 @@ Add Library
 ```Lua
 local AnyName = library:Add("AnyLibraryName")
 ```
-add label
+Add Label
 ```Lua
 main:CreateLabel("AnyLabel")
 ```
