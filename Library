@@ -516,5 +516,3 @@ if shared.SynergyXLibrary then
         end
         return SynergyLibrary
     end
-    end
-    
