@@ -26,3 +26,13 @@ AnyName:CreateButton("Any Name", function()
     print("hi how are u bad?")
 end)
 ```
+Add Slider
+```Lua
+AnyName:CreateSlider("name here", 1, 100, function(val) -- no limit! u can change val to any
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = val
+end)  
+```
+Sent Notify
+```Lua
+AnyName:CreateNotify("Hello Word", 5) -- 5 is timer u can set what ever u want and hello word u can change word
+```
