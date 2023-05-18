@@ -1,9 +1,10 @@
+local Library = {}
 function notify(text, duration)
     local SynergyNotifications = Instance.new("ScreenGui")
 
 
     SynergyNotifications.Name = "SynergyNotifications"
-    SynergyNotifications.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    SynergyNotifications.Parent = game.CoreGui
     SynergyNotifications.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     
     local SynergyX = Instance.new("Frame")
@@ -60,15 +61,13 @@ if shared.SynergyXLibrary then
     notify("Synergy Library Already Injected", 2)
     else
     shared.SynergyXLibrary = true
-    local library = {}
-    
-    function library:Add(name)
+    function Library:Add(name)
     
         local Loader = Instance.new("ScreenGui")	
     
     
         Loader.Name = "Loader"
-        Loader.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+        Loader.Parent = game.CoreGui
         Loader.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
         Loader.ResetOnSpawn = false
     
@@ -208,10 +207,7 @@ if shared.SynergyXLibrary then
         end
         coroutine.wrap(EDHOEX_fake_script)()
     
-    
-        local SynergyLibrary = {}
-    
-        function SynergyLibrary:CreateButton(text, callback)
+        function Library:CreateButton(text, callback)
             local callback = callback or function() end
     
             local ButtonFrame = Instance.new("Frame")
@@ -262,7 +258,7 @@ if shared.SynergyXLibrary then
             end)
         end
     
-        function SynergyLibrary:CreateLabel(text)
+        function Library:CreateLabel(text)
     
             local LabelFrame = Instance.new("Frame")
             LabelFrame.Name = "LabelFrame"
@@ -290,7 +286,7 @@ if shared.SynergyXLibrary then
     
         end
     
-        function SynergyLibrary:CreateToggle(text, callback)
+        function Library:CreateToggle(text, callback)
             local actions = {}
             local enabled = false
     
@@ -347,10 +343,7 @@ if shared.SynergyXLibrary then
             Toggle.MouseButton1Click:Connect(Fire)
     
         end
-        function SynergyLibrary:CreateSlider(text, minvalue, maxvalue, callback)
-    
-    
-            --Properties:
+        function Library:CreateSlider(text, minvalue, maxvalue, callback) --Properties:
             local SlidersFrame = Instance.new("Frame")
             SlidersFrame.Name = "SlidersFrame"
             SlidersFrame.Parent = Tab1
@@ -457,12 +450,12 @@ if shared.SynergyXLibrary then
                 end)
             end)
         end
-        function SynergyLibrary:CreateNotify(text, duration)
+        function Library:CreateNotify(text, duration)
             local SynergyNotifications = Instance.new("ScreenGui")
         
         
             SynergyNotifications.Name = "SynergyNotifications"
-            SynergyNotifications.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+            SynergyNotifications.Parent = game.CoreGui
             SynergyNotifications.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
             
             local SynergyX = Instance.new("Frame")
@@ -511,8 +504,26 @@ if shared.SynergyXLibrary then
             UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
             UIGridLayout.VerticalAlignment = Enum.VerticalAlignment.Bottom
             UIGridLayout.CellSize = UDim2.new(0, 480, 0, 55)
-            wait(duration)
+            task.wait(duration)
             SynergyNotifications:Destroy()
         end
-        return SynergyLibrary
+        return Library
     end
+--[[
+    
+    local Tab1Section = Library:Add("SynergyX")
+    Tab1Section:CreateLabel("this is why i love synergyx cuz it had owns Library")
+    Tab1Section:CreateButton("Killaura", function()
+        print("hi how are zu bad?")
+    end)
+    Tab1Section:CreateToggle("best toggle", function(state)
+        print(state)
+    end)  
+    Tab1Section:CreateSlider("best slider!", 1, 9999, function(val)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = val
+    end)  
+    
+    Tab1Section:CreateNotify("Hello Word", 2)
+  end
+--]]
+end
