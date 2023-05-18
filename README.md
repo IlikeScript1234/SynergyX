@@ -16,7 +16,7 @@ AnyName:CreateLabel("AnyLabel")
 ```
 Add Toggle (Work only print state)
 ```Lua
-AmyName:CreateToggle("Toggle", function(state)
+AnyName:CreateToggle("Toggle", function(state)
 print(state)
 end)
 ```
