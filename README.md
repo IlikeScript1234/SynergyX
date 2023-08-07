@@ -1,3 +1,8 @@
-# wsp guys is me maxlasertech or synergy x developer
+# Synergy X, An Executor Script !
+# Working On Mobile/Pc
 
-# im working for script and pc executor
+# Script:
+
+```lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/IlikeScript1234/SynergyX/main/Launcher.lua", true))()
+```
