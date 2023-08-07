@@ -1,1 +1,0 @@
-the executor made by Synergy X Developer!
